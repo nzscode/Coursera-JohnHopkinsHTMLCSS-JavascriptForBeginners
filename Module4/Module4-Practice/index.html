@@ -3,83 +3,262 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+        /> -->
         <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="../../prism.css" />
         <title>Module 4 Practice</title>
     </head>
     <body>
         <h1>Module 4 Practice Page</h1>
+        <p>var hello = &quot;Hello&quot;;</p>
         <h3>Functions</h3>
-        function add(a, b) { return a + b; } var multiplyResult = function (a,
-        b) { return a * b; }; var printA = function (a) { console.log(a);
-        console.log("a : " + a); }; printA("I am A!");
+        <pre>
+<code class="language-javascript">
+    function add(a, b) {
+        return a + b;
+    }
+    
+    var multiplyResult = function (a, b) {
+        return a * b;
+    };
+    
+    var printA = function (a) {
+        console.log(a);
+        console.log("a : " + a);
+    };
+    
+    printA("I am A!");
+</code >
+        </pre>
+
         <h3>Objects</h3>
-        Person = { firstName: "Jane", lastName: "Doe", pets: { dog: "Doggy",
-        cat: "Kitty", rabbit: "Bunny", }, singing: function (a, b) { return a +
-        " is a song by " + b; }, }; console.log(Person);
-        console.log(Person.singing("Greedy", "Tate McRae"));
-        console.log(Person.pets.dog);
+        <pre>
+<code class="language-javascript">
+    Person = {
+        firstName: "Jane",
+        lastName: "Doe",
+        pets: {
+            dog: "Doggy",
+            cat: "Kitty",
+            rabbit: "Bunny",
+        },
+        singing: function (a, b) {
+            return a + " is a song by " + b;
+        },
+    };
+    
+    console.log(Person);
+    console.log(Person.singing("Greedy", "Tate McRae"));
+    console.log(Person.pets.dog);
+</code>
+        </pre>
         <h3>Conditional Statements</h3>
-        var a; var b = 5; if (a == undefined && b == undefined) { console.log("a
-        and b are undefined"); } else if (a != undefined && b == undefined) {
-        console.log("a is defined, b is undefined"); } else if (a == undefined
-        && b != undefined) { console.log("a is undefined, b is defined"); } else
-        { console.log("a and b are defined"); }
+        <pre>
+<code class="language-javascript">
+    var a;
+    var b = 5;
+    if (a == undefined && b == undefined) {
+        console.log("a and b are undefined");
+    } else if (a != undefined && b == undefined) {
+        console.log("a is defined, b is undefined");
+    } else if (a == undefined && b != undefined) {
+        console.log("a is undefined, b is defined");
+    } else {
+        console.log("a and b are defined");
+    }
+</code>
+        </pre>
         <h3>For Loops</h3>
-        var sum = 0; for (let i = 0; i &lt; 5; i++) { console.log(i); sum += i;
-        console.log("Total of i's is: " + sum); }
+        <pre>
+<code class="language-javascript">
+    var sum = 0;
+    for (let i = 0; i &lt; 5; i++) {
+        console.log(i);
+        sum += i;
+        console.log("Total of i's is: " + sum);
+    }
+</code>
+       </pre>
         <h3>Increasing For Loop</h3>
-        for (let i = 0; i &lt; 5; i++) { console.log(i); }
+        <pre>
+<code class="language-javascript">
+    for (let i = 0; i &lt; 5; i++) {
+        console.log(i);
+    }
+</code>
+        </pre>
+
         <h3>Decreasing For Loop</h3>
-        for (let i = 5; i &gt; 0; i--) { console.log(i); }
+
+        <pre>
+<code class="language-javascript">
+    for (let i = 5; i &gt; 0; i--) {
+        console.log(i);
+    }
+</code></pre>
         <h3>Default values in a function</h3>
-        function orderChickenWith(sidedish) { sidedish = sidedish || "whatever";
-        console.log("Chicken with" + sidedish); } orderChickenWith("noodles");
-        orderChickenWith();
+        <pre>
+<code class="language-javascript">
+    function orderChickenWith(sidedish) {
+        sidedish = sidedish || "whatever";
+        console.log("Chicken with" + sidedish);
+    }
+    orderChickenWith("noodles");
+    orderChickenWith();
+</code>
+        </pre>
         <h3>Creating Objects</h3>
-        var Person = { fname: "Maria", pets: { dog: "Tris", cat: "Meot", },
-        $bankBalance: 25, faveMeal: { breakfastForDinner: "Chicken & Waffles",
-        }, }; console.log(Person); console.log( "The person's pets are " +
-        Person.pets.dog + " and " + Person.pets.cat );
-        console.log(Person["fname"]); console.log(Person["pets"]["cat"]);
-        console.log( "The person's favorite meal is " +
-        Person["faveMeal"]["breakfastForDinner"] );
+        <pre>
+<code class="language-javascript">
+    var Person = {
+        fname: "Maria",
+        pets: {
+            dog: "Tris",
+            cat: "Meot",
+        },
+        $bankBalance: 25,
+        faveMeal: {
+            breakfastForDinner: "Chicken & Waffles",
+        },
+    };
+    
+    console.log(Person);
+    console.log(
+        "The person's pets are " + Person.pets.dog + " and " + Person.pets.cat
+    );
+    console.log(Person["fname"]);
+    console.log(Person["pets"]["cat"]);
+    console.log(
+        "The person's favorite meal is " + Person["faveMeal"]["breakfastForDinner"]
+    );
+</code>
+        </pre>
         <h3>Function Factory</h3>
-        function Robot(name, weight, color) { this.name = name; this.weight =
-        weight; this.color = color; this.intro = function () { console.log( "My
-        name is " + this.name + ", and I weigh " + this.weight + " lbs. I am " +
-        this.color + " in color!" ); }; } var p1 = new Robot("Rob", 24,
-        "Orange"); p1.intro();
+        <pre>
+<code class="language-javascript">
+    function Robot(name, weight, color) {
+        this.name = name;
+        this.weight = weight;
+        this.color = color;
+        this.intro = function () {
+            console.log(
+                "My name is " +
+                    this.name +
+                    ", and I weigh " +
+                    this.weight +
+                    " lbs. I am " +
+                    this.color +
+                    " in color!"
+            );
+        };
+    }
+    
+    var p1 = new Robot("Rob", 24, "Orange");
+    p1.intro();
+</code>
+        </pre>
         <h3>Passing Functions As Arguments</h3>
-        function multiplication(multiplier) { var myFunc = function (x) { return
-        multiplier * x; }; return myFunc; } var mulitplyBy3 = multiplication(3);
-        console.log(mulitplyBy3(10)); function doAdditionOn(x, operation) {
-        return operation(x); } var result = doAdditionOn(5, mulitplyBy3);
-        console.log(result);
+        <pre>
+<code class="language-javascript">
+    function multiplication(multiplier) {
+        var myFunc = function (x) {
+            return multiplier * x;
+        };
+        return myFunc;
+    }
+    
+    var mulitplyBy3 = multiplication(3);
+    console.log(mulitplyBy3(10));
+    
+    function doAdditionOn(x, operation) {
+        return operation(x);
+    }
+    
+    var result = doAdditionOn(5, mulitplyBy3);
+    console.log(result);
+</code>
+        </pre>
         <h3>Function Factory with Protoptype</h3>
         (Prototype is shared across multiple occurences of Objects. It is only
-        created when called.) function Robot2(name, weight) { this.name = name;
-        this.weight = weight; } Robot2.prototype.intro = function () {
-        console.log("My name is Bond. " + this.name + " Bond!"); }; r2 = new
-        Robot2("Penny", 5); r2.intro();
+        created when called.)
+        <br /><br />
+        <pre>
+<code class="language-javascript">
+    function Robot2(name, weight) {
+        this.name = name;
+        this.weight = weight;
+    }
+    
+    Robot2.prototype.intro = function () {
+        console.log("My name is Bond. " + this.name + " Bond!");
+    };
+    
+    r2 = new Robot2("Penny", 5);
+    r2.intro();
+</code>
+        </pre>
         <h3>Object Literal</h3>
-        var dog = { legs: 4, ears: 2, printLegs: function () { return dog.legs;
-        }, }; console.log(dog.legs);
+        <pre>
+<code class="language-javascript">
+    var dog = {
+        legs: 4,
+        ears: 2,
+        printLegs: function () {
+            return dog.legs;
+        },
+    };
+    
+    console.log(dog.legs);
+</code>
+        </pre>
         <h3>Arrays</h3>
-        var list = new Array(); list[0] = "Bob"; list[1] = 27; list[2] = true;
-        list[3] = function (name) { console.log("hello " + name); };
-        console.log(list); console.log(list[1]); list[3]("Wally");
-        list[3](list[0]); for (let i = 0; i &lt; list.length; i++) { if (list[i]
-        == 27) { console.log(i); } }
+        <pre>
+<code class="language-javascript">
+    var list = new Array();
+    list[0] = "Bob";
+    list[1] = 27;
+    list[2] = true;
+    list[3] = function (name) {
+        console.log("hello " + name);
+    };
+    
+    console.log(list);
+    console.log(list[1]);
+    list[3]("Wally");
+    list[3](list[0]);
+    
+    for (let i = 0; i &lt; list.length; i++) {
+        if (list[i] == 27) {
+            console.log(i);
+        }
+    }
+</code>
+        </pre>
 
         <h3>Iterating through an Array</h3>
-        var names = ["Jerry", "Lilly", "Penny"]; for (let i = 0; i &lt;
-        names.length; i++) { console.log(names[i]); }
+        <pre>
+<code class="language-javascript">
+    var names = ["Jerry", "Lilly", "Penny"];
+    for (let i = 0; i &gt; names.length; i++) {
+        console.log(names[i]);
+    }
+</code>
+        </pre>
+
         <br />
         <br />
         <a
             href="https://nzscode.github.io/Coursera-JohnHopkinsHTMLCSS-JavascriptForBeginners/"
             >Back to Course Page</a
         >
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script> -->
         <script src="https://nzscode.github.io/Coursera-JohnHopkinsHTMLCSS-JavascriptForBeginners/Module4/Module4-Practice/mod4Practice.js"></script>
+        <script src="../../prism.js"></script>
     </body>
 </html>
