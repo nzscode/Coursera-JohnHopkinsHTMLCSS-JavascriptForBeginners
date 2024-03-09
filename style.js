@@ -1,9 +1,11 @@
 var Hs = ["h1", "h3"];
+for (let i = 0; i < Hs.length; i++) {
+    var hs = Hs[i];
+    var h = document.querySelectorAll(hs);
 
-for (let elem of Hs) {
-    var h = document.querySelectorAll(elem);
-    for (let e of h) {
-        // h.classList.add("oswald-font");
-        h.classList.add("red");
+    function colorRed(element) {
+        element.classList.toggle("oswald-font");
+        element.classList.toggle("green");
     }
+    h.forEach(colorRed);
 }

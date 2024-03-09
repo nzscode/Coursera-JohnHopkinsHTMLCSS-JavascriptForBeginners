@@ -13,17 +13,21 @@
 .oswald-font {
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
 }
 
 .red {
     color: red;
 }
+
+.green {
+    color: green;
+}
 pre {
     font-size: 20px;
     padding: 15px;
     background-color: #3b187c8a;
     color: azure;
-    width: 50%;
+    width: auto;
 }
